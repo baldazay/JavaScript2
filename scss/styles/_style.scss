@@ -1,0 +1,51 @@
+body {
+    height: 100vh;
+    background-color: lightblue;
+
+    header {
+        padding: 15px 30px;
+        height: 12vh;
+        background-color: rgb(33, 44, 65);
+    }
+
+    .btn-cart {
+        width: 100px;
+        right: 20px;
+        float: right;
+    }
+
+    .products {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        padding: 30px;
+    }
+
+    .product-item {
+        margin: 0 10px;
+        text-align: center;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    h3 {
+        font-size: 22px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: 500;
+        margin: 10px 0 0 0;
+    }
+
+    p {
+        font-size: 20px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: 700;
+        color: white;
+        margin: 10px 0 0 0;
+    }
+
+    .buy-btn {
+        margin: 13px 0 0 0;
+        width: 50%;
+    }
+}
