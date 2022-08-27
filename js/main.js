@@ -2,8 +2,8 @@ class ProductList {
     constructor(container = '.products') {
         this.container = container;
         this.goods = [];
+        this.allProducts = [];
         this._fetchProducts();//рекомендация, чтобы метод был вызван в текущем классе
-        this.render();//вывод товаров на страницу
     }
 
     _fetchProducts() {
@@ -19,6 +19,7 @@ class ProductList {
         const block = document.querySelector(this.container);
         for (let product of this.goods) {
             const item = new ProductItem(product);
+            this.allProducts.push(item);
             block.insertAdjacentHTML("beforeend", item.render());
             //              block.innerHTML += item.render();
         }
@@ -60,3 +61,6 @@ class CartItem {
     render() { }
 }
 
+let list = new ProductList();
+list.render();
+list.getSum();
