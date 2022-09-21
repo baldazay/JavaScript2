@@ -185,19 +185,6 @@ header {
     text-align: center;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 .products {
     margin: 30px auto;
     padding: 0 35px;
@@ -252,4 +239,9 @@ header {
 .buy-btn:active {
     background: linear-gradient(90deg, rgba(255, 99, 0, 1) 0%, rgba(255, 196, 88, 0.83) 100%);
     color: black;
+}
+
+.error {
+    margin: 50px 0 0 0;
+    text-align: center;
 }
