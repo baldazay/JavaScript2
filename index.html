@@ -14,51 +14,16 @@
     <div id="app">
         <header>
             <div class="logo">Logo</div>
-            <form action="#" class="search-form" @submit.prevent="filter">
-                <input type="text" class="search-field" placeholder="Search product" v-model="userSearch">
-                <button class="search-btn" type="submit">
-                    <i class="fas fa-search"></i>
-                </button>
-            </form>
+            <search></search>
             <button class="cart-btn" @click="showCart=!showCart">Cart</button>
-            <div class="cart" v-show="showCart">
-                <div class="product-item-none" v-if="!cartItems.length">Your cart is empty</div>
-                <div>
-                    <div class="cart-item" v-for="item of cartItems" :key="item.id_product">
-                        <img class="cart-img" :src="item.img" :alt="item.product_name" width="120" height="80"
-                            v-if="item.img">
-                        <img class="cart-img" :src="imgCatalog" :alt="item.product_name" width="120" height="80" v-else>
-                        <div class="cart-item-info">
-                            <h2 class="cart-title">{{ item.product_name }}</h2>
-                            <div class="cart-price">Price: <span class="cart-price-amount">{{ item.price }}</span> $
-                            </div>
-                            <div class="cart-quantity">Quantity: <span class="cart-quantity-num">{{ item.quantity
-                                    }}</span>
-                            </div>
-                            <button class="delete-btn" @click="removeProduct(item)">X</button>
-
-                        </div>
-                    </div>
-                    <div class="cart-footer" v-if="cartItems.length">
-                        <button class="clear-cart-btn" @click="clearCart()">Clear Cart</button>
-                        <div class="cart-total">Total: <span class="cart-total-amount">{{ totalPrice }}</span>
-                            $</div>
-                    </div>
-                </div>
-            </div>
+            <cart :cart-items="cartItems" :img="imgCatalog" :visibility="showCart"></cart>
         </header>
+
         <main>
-            <div class="products">
-                <div class="product-item" v-for="product of filtered" :key="product.id_product">
-                    <h2 class="product-title">{{ product.product_name }}</h2>
-                    <img class="product-img" :src="product.img" :alt="product.product_name" width="200" height="150"
-                        v-if="product.img">
-                    <img class="product-img" :src="imgCatalog" :alt="product.product_name" width="200" height="150"
-                        v-else>
-                    <div class="product-price"><span class="product-price-amount">{{ product.price }}</span> $</div>
-                    <button class="buy-btn" @click="addProduct(product), countTotal()">Add to Cart</button>
-                </div>
-            </div>
+
+            <catalog :products="filtered" :img="imgCatalog" @add-product="addProduct"></catalog>
+            <error></error>
+
         </main>
         <footer>
 
@@ -69,6 +34,11 @@
     <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"
         integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP" crossorigin="anonymous">
         </script>
+    <script src="js/CartComponent.js"></script>
+    <script src="js/CatalogComponent.js"></script>
+    <script src="js/SearchComponent.js"></script>
+    <script src="js/ErrorComponent.js"></script>
+
     <script src="js/main.js"></script>
 
 </body>

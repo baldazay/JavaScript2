@@ -12,14 +12,18 @@ const app = new Vue({
         imgCatalog: 'https://via.placeholder.com/200x150',
         userSearch: "",
         showCart: false,
-        totalPrice: 0
+        totalPrice: 0,
+        error: false
     },
 
     methods: {
         getJson(url) {
             return fetch(url)
                 .then(result => result.json())
-                .catch(error => console.log(error));
+                .catch(error => {
+                    console.log(error);
+                    this.error = true;
+                });
         },
 
         addProduct(product) {
