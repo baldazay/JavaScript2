@@ -1,0 +1,243 @@
+.header {
+
+    .header__wrp {
+        display: flex;
+        justify-content: space-between;
+        min-height: 75px;
+        align-items: center;
+    }
+
+    .header__logo-wrp {
+        display: flex;
+        justify-content: space-between;
+
+        @include tablet {
+            margin: 0 0 0 20px;
+        }
+    }
+
+    .header__logo-link {
+        display: block;
+        width: 46px;
+
+        &:hover,
+        &:focus {
+            outline: 2px solid $dark-pink;
+        }
+
+        &:active {
+            opacity: 0.4;
+            outline: 2px solid $dark-pink;
+        }
+    }
+
+    .header__search-form {
+        min-width: 100px;
+        position: relative;
+    }
+
+    .header__search-input {
+        background-color: transparent;
+        border: none;
+        border-radius: 5px;
+        color: $white;
+        width: 100%;
+        height: 35px;
+        float: right;
+        padding: 0 30px 0 10px;
+        width: 70px;
+        transition: width 0.8s cubic-bezier(0, 0, 1, 1) 500ms;
+
+        &:focus {
+            outline: 2px solid $dark-pink;
+            border-radius: 5px;
+            width: 200px;
+
+            @include tablet {
+                width: 200px;
+            }
+
+            @include mobile-xl {
+                width: 120px;
+            }
+        }
+    }
+
+    .header__search-btn {
+        position: absolute;
+        height: 100%;
+        right: 5px;
+        z-index: 2;
+        background-color: transparent;
+        border: none;
+        color: $white;
+        cursor: pointer;
+
+        &:hover,
+        &:focus {
+            fill: $dark-pink;
+        }
+
+        &:active {
+            fill: $sales-bkg-color;
+        }
+    }
+
+    .header__list {
+        display: flex;
+
+        @include tablet {
+            margin: 0 20px 0 0;
+        }
+    }
+
+    .header__item {
+        margin: 0 0 0 33px;
+        vertical-align: middle;
+        cursor: pointer;
+
+        @include tablet-s {
+            margin: 0;
+        }
+    }
+
+    .shop-cart-link {
+        position: relative;
+    }
+
+    .shop-cart-span {
+        position: absolute;
+        display: block;
+        background-color: $dark-pink;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        top: -7px;
+        right: -9px;
+        text-align: center;
+    }
+
+    .shop-cart {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 500px;
+        background-color: $white;
+        border: 2px solid $black;
+        padding: 10px 30px;
+        cursor: pointer;
+        z-index: 5;
+    }
+
+    .shop-cart-header {
+        display: grid;
+        grid-template-columns: repeat(4, 25%);
+        height: 25px;
+        margin: 0 auto;
+    }
+
+    .shop-cart-row {
+        display: grid;
+        grid-template-columns: 3fr 1fr 2fr 2fr 1fr;
+        height: 25px;
+        margin: 0 auto;
+    }
+
+    .shop-cart-col {
+        margin: 0 0 0 50px;
+        @include font(15px, 18px, 700);
+
+        &:first-child {
+            margin: 0;
+        }
+    }
+
+    .shop-cart-price {
+        padding: 10px 0 0 0;
+        border-top: 2px solid gray;
+        @include font(18px, 20px, 700);
+    }
+
+    .header__nav-wrp {
+        position: relative;
+        padding: 2px 0 0 0;
+    }
+
+    .header__button {
+        border: none;
+        background-color: transparent;
+        fill: $white;
+        cursor: pointer;
+
+        &:hover,
+        &:focus {
+            fill: $dark-pink;
+        }
+    }
+
+    .header__nav {
+        display: none;
+        position: absolute;
+        background-color: $white;
+        width: 220px;
+        max-height: 700px;
+        top: 54px;
+        padding: 37px 0 30px 34px;
+        box-shadow: -1px 5px 12px -4px rgba(0, 0, 0, 0.54);
+        z-index: 2;
+
+        @include tablet-s {
+            width: 300px;
+            top: 30px;
+            right: -30px;
+        }
+
+        @include mobile {
+            width: 342px;
+            top: -23px;
+            right: -28px;
+        }
+    }
+
+    .display-block {
+        display: block;
+    }
+
+    .header__nav-button {
+        position: absolute;
+        border: none;
+        background-color: transparent;
+        top: 16px;
+        right: 30px;
+    }
+
+    .header__link {
+        fill: $white;
+        position: relative;
+
+        @include tablet-s {
+            display: none;
+        }
+
+        &:hover,
+        &:focus {
+            fill: $dark-pink;
+        }
+
+        &:active {
+            fill: $sales-bkg-color;
+        }
+    }
+
+    .header__title {
+        @include font($font-weight: 700);
+        color: $black;
+        text-transform: uppercase;
+        margin: 0 0 4px 0;
+    }
+
+    .shop-cart-footer {
+        width: 100%;
+        display: flex;
+    }
+}

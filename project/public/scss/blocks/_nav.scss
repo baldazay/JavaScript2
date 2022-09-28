@@ -1,0 +1,52 @@
+.header__nav {
+
+    .header__nav-button {
+        padding: 3px 3px 0 3px;
+
+        &:hover,
+        &:focus {
+            outline: 1px solid $black;
+        }
+
+        &:active {
+            outline: 1px solid $black;
+            background-color: $black;
+            fill: $white;
+        }
+    }
+
+    .nav-sub-item__title {
+        display: block;
+        @include font;
+        color: $dark-pink;
+        text-transform: uppercase;
+        text-decoration: none;
+        margin: 20px 0 1px 0;
+
+        &:hover,
+        &:focus {
+            text-decoration: underline;
+        }
+
+        &:active {
+            color: $black;
+        }
+    }
+
+    .nav-sub-item__item-link {
+        display: block;
+        @include font;
+        color: #6F6E6E;
+        text-decoration: none;
+        margin: 11px 0 0 21px;
+
+        &:hover {
+            color: $black;
+            text-decoration: underline;
+        }
+
+        &:active {
+            color: $dark-pink;
+        }
+    }
+}

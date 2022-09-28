@@ -1,0 +1,129 @@
+.footer__subscribe {
+    background: url(../images/subscribe-bg.png);
+    background-size: cover;
+    min-height: 448px;
+
+    .footer__subscribe-wrp {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .footer__subscribe-user {
+        width: 31.6%;
+        height: 225px;
+        text-align: center;
+        margin: 97px 0 0 0;
+
+        @include tablet {
+            width: 50%;
+            margin: 53px auto 0 auto;
+        }
+
+        @include mobile-xl {
+            width: 90%;
+            margin: 54px auto 0 auto;
+        }
+    }
+
+    .footer__subscribe-img {
+        margin: 0 0 35px 0;
+    }
+
+    .footer__subscribe-quote {
+        font-style: italic;
+        @include font(20px, 24px);
+        color: $black;
+    }
+
+    .footer__subscribe-info {
+        width: 49%;
+        height: 142px;
+        text-align: center;
+        margin: 155px 0 0 0;
+
+        @include tablet {
+            width: 100%;
+            margin: 48px auto 140px auto;
+        }
+
+        @include mobile {
+            width: 341px;
+            margin: 59px auto 110px auto;
+        }
+    }
+
+    .footer__subscribe-title {
+        text-transform: uppercase;
+        @include font(24px, 167.2%, 700);
+        color: $black;
+    }
+
+    .footer__subscribe-text {
+        text-transform: uppercase;
+        @include font(18px, 30px);
+        color: $black;
+
+        @include mobile {
+            @include font(14px, 21px);
+        }
+    }
+
+    .footer__subscribe-form {
+        margin: 32px 0 0 0;
+        display: flex;
+        justify-content: center;
+        widows: 356px;
+        height: 49px;
+    }
+
+    label[for=subscribe] {
+        display: none;
+    }
+
+    .footer__subscribe-input {
+        width: 226px;
+        height: 100%;
+        padding: 0 0 0 22px;
+        border: none;
+        border-radius: 30px 0 0 30px;
+        background-color: #E1E1E1;
+        margin: 0 3px 0 0;
+
+        &:focus,
+        &:active {
+            outline: 2px solid $dark-pink;
+        }
+
+        &::placeholder {
+            @include font;
+            color: $black;
+            opacity: 0.67;
+        }
+    }
+
+    .footer__subscribe-btn {
+        margin: 0 0 0 -2.71px;
+        width: 100px;
+        background-color: $dark-pink;
+        border: none;
+        border-radius: 0 30px 30px 0;
+        @include font;
+        align-items: center;
+        color: #FFFFFF;
+
+        &:hover,
+        &:focus {
+            outline: 2px solid $dark-pink;
+            background: transparent;
+            color: $dark-pink;
+            cursor: pointer;
+        }
+
+        &:active {
+            outline: 2px solid $dark-pink;
+            background-color: $black;
+            color: #fff;
+        }
+    }
+}

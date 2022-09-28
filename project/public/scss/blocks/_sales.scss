@@ -1,0 +1,105 @@
+.sales {
+
+    .sales__list {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin: 65px 0 0 0;
+
+        @include tablet {
+            margin: 20px 0 0 0;
+        }
+    }
+
+    .sales__item {
+        /* padding: 20px; */
+        box-sizing: border-box;
+        width: 31.6%;
+        height: 260px;
+        background-color: $sales-bkg-color;
+        text-align: center;
+        /* padding: 105px 0 0 0; */
+
+        @include tablet {
+            width: 31.5%;
+            height: 168px;
+            padding: 58px 0 0 0;
+        }
+
+        @include mobile-xl {
+            width: 100%;
+            height: 247px;
+            margin: 32px 0 0 0;
+        }
+
+        @include mobile {
+            width: 100%;
+            height: 247px;
+            margin: 32px 0 0 0;
+            padding: 98px 0 0 0;
+        }
+    }
+
+    .sales__item--woman {
+        background: url("../images/offer-woman.jpg") no-repeat center/cover;
+    }
+
+    .sales__item--man {
+        background: url("../images/offer-man.jpg") no-repeat center/cover;
+    }
+
+    .sales__item--kid {
+        background: url('../images/offer-kid.jpg') no-repeat center/cover;
+    }
+
+    .sales__item--accessory {
+        background: url('../images/offer-accessory.jpg') no-repeat center/cover;
+        width: 100%;
+        height: 180px;
+        margin: 30px 0 0 0;
+
+        @include tablet {
+            height: 116px;
+            margin: 20px 0 0 0;
+            padding: 35px 0 0 0;
+        }
+
+        @include mobile {
+            height: 111px;
+            background-size: cover;
+            padding: 30px 0 0 0;
+            margin: 32px 0 0 0;
+        }
+
+        & .sales__item-text {
+            margin: 65px 0 0 0;
+
+            @include tablet {
+                margin: 0;
+            }
+        }
+    }
+
+    .sales__item-text {
+        text-transform: uppercase;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        @include font(16px, 19px);
+        color: $white;
+        margin: 105px 0 0 0;
+
+        @include tablet {
+            margin: 0;
+        }
+
+        @include mobile-xl {
+            margin: 35px 0 0 0;
+        }
+    }
+
+    .sales__title {
+        text-transform: uppercase;
+        @include font(24px, 29px, 700);
+    }
+}

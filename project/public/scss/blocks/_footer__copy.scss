@@ -1,0 +1,60 @@
+.footer__copy {
+    background-color: $black;
+    min-height: 79px;
+
+    .footer__copy-wrp {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        @include mobile-xl {
+            flex-direction: column-reverse;
+        }
+    }
+
+    .footer__copy-text {
+        max-width: 332px;
+        @include font(16px, 19px);
+        color: $white;
+        margin: 30px 0 0 0;
+
+        @include mobile-xl {
+            width: 251px;
+            margin: 40px auto 9px auto;
+        }
+    }
+
+    .footer__copy-list {
+        display: flex;
+        width: 148px;
+        justify-content: space-between;
+        margin: 24px 0 0 0;
+
+        @include mobile-xl {
+            margin: 43px auto 0 auto;
+        }
+    }
+
+
+    .footer__copy-item-link {
+        display: block;
+        width: 32px;
+        height: 24px;
+        background-color: $white;
+        text-align: center;
+        padding: 8px 0 0 0;
+        cursor: pointer;
+
+        &:hover,
+        &:focus {
+            background-color: $dark-pink;
+            fill: $white;
+        }
+
+        &:active {
+            outline: 1px solid $dark-pink;
+            background-color: $white;
+            fill: $dark-pink;
+        }
+    }
+}
