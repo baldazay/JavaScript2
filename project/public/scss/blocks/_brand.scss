@@ -1,0 +1,105 @@
+.brand {
+    display: flex;
+    background-color: $light-pink;
+
+    @include tablet-s {
+        height: 363px;
+    }
+
+    .brand__img {
+        width: 50%;
+        height: auto;
+
+        @include tablet-s {
+            display: none;
+        }
+
+        /* @include mobile {
+            display: none;
+        } */
+    }
+
+    .brand__title-wrp {
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+        padding: 0 0 0 88px;
+
+        @include laptop {
+            padding: 0 0 0 67px;
+        }
+
+        @include tablet {
+            padding: 0 0 0 67px;
+        }
+
+        @include tablet-s {
+            min-height: 150px;
+            padding: 0 0 0 100px;
+        }
+
+        @include mobile {
+            padding: 0 0 0 83px;
+        }
+    }
+
+    .brand__title {
+        width: 70%;
+        text-transform: uppercase;
+        @include font(48px, 58px, 900);
+        color: $black;
+        position: relative;
+
+        @include laptop {
+            width: 80%;
+            @include font(42px, 50px, 900);
+        }
+
+        @include tablet-s {
+            width: 80%;
+            @include font(38px, 46px, 900);
+            margin: 0 auto;
+        }
+
+        @include mobile {
+            width: 85%;
+            @include font(38px, 46px, 900);
+        }
+    }
+
+    .brand__title:before {
+        content: '';
+        background: url('../images/vertical-line.png');
+        width: 12px;
+        height: 92px;
+        margin: 0 16px 0 60px;
+        position: absolute;
+        top: 5px;
+        left: -85px;
+
+        @include mobile {
+            height: 61px;
+        }
+    }
+
+    .brand__subtitle {
+        display: block;
+        @include font(37px, 44px, 700);
+
+        @include laptop {
+            @include font(24px, 29px, 700);
+        }
+
+        @include tablet-s {
+            @include font(22px, 26px, 700);
+        }
+
+        @include mobile {
+            @include font(20px, 24px, 700);
+        }
+    }
+
+    .brand__subtitle-pink {
+        color: $dark-pink;
+    }
+}

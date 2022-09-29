@@ -1,0 +1,14 @@
+.page-heading {
+    height: 148px;
+    background-color: #F8F3F4;
+
+    .page-heading__title {
+        @include font(24px, 29px);
+        text-transform: uppercase;
+        padding: 60px 0 0 0;
+
+        @include mobile-xl {
+            text-align: center;
+        }
+    }
+}

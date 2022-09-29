@@ -1,0 +1,72 @@
+body {
+    font-family: 'Lato';
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: 400;
+    color: $black;
+    background-color: #fcfcfc;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+
+    @include laptop-xl {
+        width: 85%;
+    }
+
+    @include tablet {
+        width: 95.7%;
+    }
+
+    @include mobile {
+        width: 96%;
+    }
+}
+
+header {
+    background-color: $black;
+}
+
+.visually-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+}
+
+.pink {
+    color: $dark-pink;
+}
+
+.invisible {
+    display: none;
+}
+
+.input-style {
+    width: 330px;
+    height: 45px;
+    border: 1px solid #A4A4A4;
+    padding: 0 15px 0 15px;
+
+    &::placeholder {
+        @include font(13px, 16px, 300);
+        color: #B1B1B1;
+    }
+
+    &:focus {
+        outline: 2px solid $dark-pink;
+        border-radius: 5px;
+    }
+
+}
+
+.footer {
+    height: 527px;
+}
