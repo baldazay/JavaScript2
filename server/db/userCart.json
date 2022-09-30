@@ -1,0 +1,22 @@
+{
+    "total": 580,
+    "countGoods": 2,
+    "contents": [
+        {
+            "quantity": 1,
+            "id_product": 105,
+            "product_name": "Baba Zina style",
+            "price": 400,
+            "img": "./images/item-5.png",
+            "description": "Takes on Australian tailoring."
+        },
+        {
+            "quantity": 1,
+            "id_product": 108,
+            "product_name": "Modno i tochka",
+            "price": 90,
+            "img": "./images/stock-8.jpg",
+            "description": "Takes on Australian tailoring."
+        }
+    ]
+}

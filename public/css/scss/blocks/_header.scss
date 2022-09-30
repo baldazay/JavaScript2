@@ -1,0 +1,305 @@
+.header {
+
+    .header__wrp {
+        display: flex;
+        justify-content: space-between;
+        min-height: 75px;
+        align-items: center;
+    }
+
+    .header__logo-wrp {
+        display: flex;
+        justify-content: space-between;
+
+        @include tablet {
+            margin: 0 0 0 20px;
+        }
+    }
+
+    .header__logo-link {
+        display: block;
+        width: 46px;
+
+        &:hover,
+        &:focus {
+            outline: 2px solid $dark-pink;
+        }
+
+        &:active {
+            opacity: 0.4;
+            outline: 2px solid $dark-pink;
+        }
+    }
+
+    .header__search-form {
+        min-width: 250px;
+        position: relative;
+    }
+
+    .header__search-input {
+        background-color: transparent;
+        border: none;
+        border-radius: 5px;
+        color: $white;
+        width: 100%;
+        height: 35px;
+        float: right;
+        padding: 0 30px 0 10px;
+        width: 70px;
+        transition: width 0.8s cubic-bezier(0, 0, 1, 1) 500ms;
+
+        &:focus {
+            outline: 2px solid $dark-pink;
+            border-radius: 5px;
+            width: 200px;
+
+            @include tablet {
+                width: 200px;
+            }
+
+            @include mobile-xl {
+                width: 120px;
+            }
+        }
+    }
+
+    .header__search-btn {
+        position: absolute;
+        height: 100%;
+        right: 5px;
+        z-index: 5;
+        fill: white;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+
+
+        &:hover,
+        &:focus {
+            fill: $dark-pink;
+        }
+
+        &:active {
+            fill: $sales-bkg-color;
+        }
+    }
+
+    .header__list {
+        display: flex;
+
+        @include tablet {
+            margin: 0 20px 0 0;
+        }
+    }
+
+    .header__item {
+        margin: 0 0 0 33px;
+        vertical-align: middle;
+        cursor: pointer;
+
+        @include tablet-s {
+            margin: 0;
+        }
+    }
+
+    .shop-cart-link {
+        position: relative;
+    }
+
+    .shop-cart-span {
+        position: absolute;
+        display: block;
+        background-color: $dark-pink;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        top: -7px;
+        right: -9px;
+        text-align: center;
+    }
+
+    .shop-cart {
+        position: absolute;
+        top: 65px;
+        right: 70px;
+        background-color: $white;
+        border: 2px solid $black;
+        padding: 15px;
+        z-index: 5;
+        cursor: default;
+    }
+
+    .shop-cart-row {
+        display: flex;
+        border: 1px solid rgba(187, 185, 185, 0.573);
+        margin: 10px auto;
+
+        &:first-child {
+            margin: 0 auto;
+        }
+    }
+
+    .shop-cart-col-img-wrp {
+        margin: 0 15px -3px 0;
+    }
+
+    .shop-cart-col-img {
+        height: 140px;
+        width: 120px;
+    }
+
+    .shop-cart-col-info-wrp {
+        padding: 0 40px 0 0;
+        position: relative;
+    }
+
+    .shop-cart-delete-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+    }
+
+    .shop-cart-col {
+        margin: 5px 0 0 0;
+        @include font;
+
+        &:first-child {
+            margin: 10px 0 40px 0;
+            font-style: italic;
+            @include font(16px, 18px, 700)
+        }
+
+        &:nth-child(4) {
+            color: rgb(251, 64, 64);
+        }
+    }
+
+    .shop-cart-price {
+        padding: 10px 0 0 0;
+        border-top: 2px solid grey;
+        @include font(18px, 20px, 700);
+    }
+
+    .shop-cart-footer {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin: 30px 0 0 0;
+    }
+
+    .clear-cart-btn {
+        width: 100px;
+        height: 40px;
+        border: 1px solid #FF6A6A;
+        padding: 5px 0;
+        @include font(16px, 19px);
+        text-decoration: none;
+        color: $dark-pink;
+        transition: background-color 0.5s linear;
+        cursor: pointer;
+
+        &:hover,
+        &:focus {
+            color: #fff;
+            background-color: $dark-pink;
+        }
+
+        &:active {
+            outline: 2px solid $dark-pink;
+            background-color: $black;
+            color: #fff;
+            transition: background-color 0.06s linear;
+        }
+    }
+
+    .shop-cart-total {
+        @include font($font-size: 20px, $font-weight: 700);
+        padding: 10px 0 0 0;
+    }
+
+    .shop-cart-total-amount {
+        color: red;
+    }
+
+
+
+
+    .header__nav-wrp {
+        position: relative;
+        padding: 2px 0 0 0;
+    }
+
+    .header__button {
+        border: none;
+        background-color: transparent;
+        fill: $white;
+        cursor: pointer;
+
+        &:hover,
+        &:focus {
+            fill: $dark-pink;
+        }
+    }
+
+    .header__nav {
+        display: none;
+        position: absolute;
+        background-color: $white;
+        width: 220px;
+        max-height: 700px;
+        top: 54px;
+        padding: 37px 0 30px 34px;
+        box-shadow: -1px 5px 12px -4px rgba(0, 0, 0, 0.54);
+        z-index: 2;
+
+        @include tablet-s {
+            width: 300px;
+            top: 30px;
+            right: -30px;
+        }
+
+        @include mobile {
+            width: 342px;
+            top: -23px;
+            right: -28px;
+        }
+    }
+
+    .display-block {
+        display: block;
+    }
+
+    .header__nav-button {
+        position: absolute;
+        border: none;
+        background-color: transparent;
+        top: 16px;
+        right: 30px;
+    }
+
+    .header__link {
+        fill: $white;
+        position: relative;
+
+        @include tablet-s {
+            display: none;
+        }
+
+        &:hover,
+        &:focus {
+            fill: $dark-pink;
+        }
+
+        &:active {
+            fill: $sales-bkg-color;
+        }
+    }
+
+    .header__title {
+        @include font($font-weight: 700);
+        color: $black;
+        text-transform: uppercase;
+        margin: 0 0 4px 0;
+    }
+}
